@@ -1,31 +1,374 @@
 ﻿@{
-    ViewBag.Title = "Home Page";
+    Layout = null;
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon - Cleaning Tools</title>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    <link rel="stylesheet" href="~/Content/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-top">
+            <div class="logo">
+                <a href="#"><i class="fab fa-amazon"></i> amazon</a>
+            </div>
+            <div class="deliver">
+                <span class="deliver-to">Deliver to</span>
+                <div class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Vietnam</span>
+                </div>
+            </div>
+            <div class="search-box">
+                <select class="search-category">
+                    <option>All</option>
+                    <option selected>Cleaning tools</option>
+                </select>
+                <input type="text" value="cleaning tools" />
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="header-right">
+                <div class="lang"><i class="fas fa-globe"></i> EN</div>
+                <div class="account">
+                    <span class="hello">Hello, Sign in</span>
+                    <span class="account-text">Account & Lists <i class="fas fa-caret-down"></i></span>
+                </div>
+                <div class="returns">
+                    <span class="returns-text">Returns</span>
+                    <span class="orders">& Orders</span>
+                </div>
+                <div class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                    <span class="cart-text">Cart</span>
+                </div>
+            </div>
+        </div>
+        <nav class="nav-secondary">
+            <div class="nav-left">
+                <a href="#"><i class="fas fa-bars"></i> All</a>
+                <a href="#">Today's Deals</a>
+                <a href="#">Customer Service</a>
+                <a href="#">Registry</a>
+                <a href="#">Gift Cards</a>
+                <a href="#">Sell</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Popular Shopping Ideas</h3>
+                <ul>
+                    <li><a href="#">Window</a></li>
+                    <li><a href="#">Bathing</a></li>
+                    <li><a href="#">Household</a></li>
+                    <li><a href="#">Tile</a></li>
+                </ul>
+                <a href="#" class="see-more">▼ See more</a>
+            </div>
+            <div class="filter-section">
+                <h3>Customer Reviews</h3>
+                <div class="stars-filter">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <span>& Up</span>
+                </div>
+            </div>
+            <div class="filter-section">
+                <h3>Deals & Discounts</h3>
+                <ul>
+                    <li><a href="#">All Discounts</a></li>
+                    <li><a href="#">Today's Deals</a></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Price</h3>
+                <div class="price-range">
+                    <input type="range" min="0" max="100" value="50" />
+                    <div class="price-labels"><span>$0</span><span>$100+</span></div>
+                    <button class="go-btn">Go</button>
+                </div>
+                <ul>
+                    <li><a href="#">Up to $10</a></li>
+                    <li><a href="#">$10 to $15</a></li>
+                    <li><a href="#">$15 to $20</a></li>
+                    <li><a href="#">$20 to $25</a></li>
+                    <li><a href="#">$25 & above</a></li>
+                </ul>
+            </div>
+            <div class="filter-section">
+                <h3>Department</h3>
+                <ul>
+                    <li><a href="#">Household Cleaning Tools</a></li>
+                    <li><a href="#">Household Cleaning Brushes</a></li>
+                    <li><a href="#">Household Mops, Buckets & Accessories</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="results">
+            <div class="results-header">
+                <p>1-48 of over 40,000 results for <span class="search-term">"cleaning tools"</span></p>
+                <div class="sort">
+                    <label>Sort by: </label>
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Avg. Customer Review</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- PRODUCT GRID -->
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=300&h=250&fit=crop" alt="Electric Spin Scrubber" />
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Electric Spin Scrubber, 2025 New Cordless Cleaning Brush for Home, IPX7 Waterproof Spin Scrubber with 7 Brush Heads, Adjustable Long...</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>4.4 (1,100)</span>
+                        </div>
+                        <div class="bought">900+ bought in past month</div>
+                        <div class="price"><span class="current">$39<sup>99</sup></span> <span class="list">List: $49.99</span></div>
+                        <div class="prime"><i class="fab fa-amazon"></i> Prime</div>
+                        <div class="delivery">Delivery <strong>Tue, Nov 4</strong></div>
+                        <div class="ships">Ships to Vietnam</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=300&h=250&fit=crop" alt="Casabella Power Spin Scrubber" />
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Casabella Power Spin Scrubber, Extendable to 47.5" – Cordless Electric Cleaner for Shower, Kitchen, Bathroom, Tile, Tub, Car, Deck...</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.1 (266)</span>
+                        </div>
+                        <div class="bought">200+ bought in past month</div>
+                        <div class="price"><span class="current">$49<sup>99</sup></span></div>
+                        <div class="delivery">Delivery <strong>Tue, Nov 4</strong></div>
+                        <div class="ships">Ships to Vietnam</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=300&h=250&fit=crop" alt="Electric Spin Scrubber Digital" />
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Electric Spin Scrubber – Cordless Cleaning Brush with Digital Display, 2 Speeds, 8 Brush Heads, IPX7 Waterproof, Adjustable Long Han...</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>4.3 (95)</span>
+                        </div>
+                        <div class="bought">2K+ bought in past month</div>
+                        <div class="price"><span class="current">$35<sup>00</sup></span> <span class="list">List: $44.99</span></div>
+                        <div class="delivery">Delivery <strong>Tue, Nov 4</strong></div>
+                        <div class="ships">Ships to Vietnam</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=300&h=250&fit=crop" alt="Handheld Scrubber" />
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">Casabella Power Spin Handheld Scrubber</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                            <span>4.2 (24)</span>
+                        </div>
+                        <div class="bought">50+ viewed in past month</div>
+                        <div class="price"><span class="current">$34<sup>99</sup></span></div>
+                        <div class="delivery">Delivery <strong>Tue, Nov 4</strong></div>
+                        <div class="ships">Ships to Vietnam</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?w=300&h=250&fit=crop" alt="YUYU Electric Spin Scrubber" />
+                    </div>
+                    <div class="product-info">
+                        <h4 class="product-title">YUYU Electric Spin Scrubber, Full-Body IPX7 Waterproof Bathroom Scrubber with Power LCD Display, Adjustable Extension Handle...</h4>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span>4.5 (1,100)</span>
+                        </div>
+                        <div class="bought">10K+ bought in past month</div>
+                        <div class="price"><span class="current">$39<sup>99</sup></span> <span class="list">List Price: $69.99</span></div>
+                        <div class="limited">Limited time deal</div>
+                        <div class="delivery">Delivery <strong>Tue, Nov 4</strong></div>
+                        <div class="ships">Ships to Vietnam</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RELATED 1 -->
+            <section class="related-section">
+                <h2>Customers who viewed items in your browsing history also viewed</h2>
+                <div class="related-grid">
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=180&fit=crop" alt="Tommy Hilfiger Mini Tote" />
+                        </div>
+                        <p class="related-title">Tommy Hilfiger Women's Monogram Mini Tote Bag With Removable Crossbody Strap</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.2</div>
+                        <div class="price small">$129<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=200&h=180&fit=crop" alt="Tommy Hilfiger Shoulder Bag" />
+                        </div>
+                        <p class="related-title">Tommy Hilfiger Leather Shoulder Bag with Removable Crossbody Strap</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.3</div>
+                        <div class="price small">$149<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=200&h=180&fit=crop" alt="Tommy Hilfiger Poppy Tote" />
+                        </div>
+                        <p class="related-title">Tommy Hilfiger Women's Poppy Small Tote, Ecru</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.1</div>
+                        <div class="price small">$99<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=200&h=180&fit=crop" alt="Tommy Hilfiger Monogram Tote" />
+                        </div>
+                        <p class="related-title">Tommy Hilfiger Monogram Leather Tote</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.5</div>
+                        <div class="price small">$159<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1591561954557-26941169b49e?w=200&h=180&fit=crop" alt="Tommy Hilfiger Crossbody" />
+                        </div>
+                        <p class="related-title">Tommy Hilfiger Women's McKenna Crossbody Bag</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.0</div>
+                        <div class="price small">$89<sup>00</sup></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RELATED 2 -->
+            <section class="related-section">
+                <h2>Recommended based on your browsing history</h2>
+                <div class="related-grid">
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=200&h=180&fit=crop" alt="Designer Tote" />
+                        </div>
+                        <p class="related-title">DORBOJACKY Designer Tote Bag for Women Large Lightweight Soft</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.4</div>
+                        <div class="price small">$55<sup>99</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=200&h=180&fit=crop" alt="Leather Shoulder Bag" />
+                        </div>
+                        <p class="related-title">MYFOR Tote Bag for Women Genuine Leather Shoulder Bags</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.2</div>
+                        <div class="price small">$75<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=200&h=180&fit=crop" alt="Pu Leather Satchel" />
+                        </div>
+                        <p class="related-title">Simple Solid Color Pu Leather Top Handle Satchel Handbags</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 4.3</div>
+                        <div class="price small">$48<sup>00</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=200&h=180&fit=crop" alt="PUMA Lunch Tote" />
+                        </div>
+                        <p class="related-title">PUMA M KELLY Adventure Lunch Tote, Black/Rose Gold</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i> 4.1</div>
+                        <div class="price small">$19<sup>99</sup></div>
+                    </div>
+                    <div class="related-card">
+                        <div class="related-img">
+                            <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=200&h=180&fit=crop" alt="Camera Purse" />
+                        </div>
+                        <p class="related-title">MARCO M KELLY Women Triple Zip Vegan Leather Camera Purses</p>
+                        <div class="rating small"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> 4.6</div>
+                        <div class="price small">$32<sup>99</sup></div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+    <footer class="footer">
+        <div class="footer-top"><a href="#">Back to top</a></div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h4>Get to Know Us</h4>
+                <ul>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">About Amazon</a></li>
+                    <li><a href="#">Investor Relations</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Make Money with Us</h4>
+                <ul>
+                    <li><a href="#">Sell products on Amazon</a></li>
+                    <li><a href="#">Sell on Amazon Business</a></li>
+                    <li><a href="#">Sell apps on Amazon</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Amazon Payment Products</h4>
+                <ul>
+                    <li><a href="#">Amazon Business Card</a></li>
+                    <li><a href="#">Shop with Points</a></li>
+                    <li><a href="#">Reload Your Balance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Let Us Help You</h4>
+                <ul>
+                    <li><a href="#">Your Account</a></li>
+                    <li><a href="#">Your Orders</a></li>
+                    <li><a href="#">Shipping Rates & Policies</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo"><i class="fab fa-amazon"></i> amazon</div>
+            <p>© 1996-2025, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </footer>
+
+</body>
+</html>
